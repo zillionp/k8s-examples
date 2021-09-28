@@ -9,4 +9,4 @@ services:
     environment:
       PORT: "9999"
     ports:
-      - "9999:9999"  
+      - "9999:9999"

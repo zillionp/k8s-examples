@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: simple-node-app
 spec:
+  type: LoadBalancer
   selector:
     app: simple-node-app
   ports:

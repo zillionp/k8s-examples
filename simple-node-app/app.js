@@ -7,7 +7,7 @@ const app = express();
 
 app.use(morgan('tiny'));
 
-app.get('/hello', (req, res) => {
+app.get('/', (req, res) => {
     res.status(200).send('Hello World!!');
 });
 

@@ -1,4 +1,3 @@
-.PHONEY: build-image
 build-image:
 	docker build \
 	-f Dockerfile \
@@ -6,4 +5,4 @@ build-image:
 	-t mandip810/simple-node-app:${TAG} .
 
 push-image:
-	docker push mandip810/simple-node-app:${TAG}	
+	docker push mandip810/simple-node-app:${TAG}

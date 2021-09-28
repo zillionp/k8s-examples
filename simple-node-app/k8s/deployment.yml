@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: simple-node-app
-        image: docker.io/mandip810/simple-node-app:v1
+        image: docker.io/mandip810/simple-node-app:v1.2
         env:
           - name: PORT
             value: "8080"
