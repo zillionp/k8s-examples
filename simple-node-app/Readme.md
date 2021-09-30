@@ -19,3 +19,11 @@
     - `deployment.yml` contains the deployment config for our app.
 - In order to access the app running locally. You will further need to forward the kubectl to your localport.
     - `kubectl port-forward pod/{pod_name} host_machine_port:container_port`
+
+## AWS EKS
+- Install `aws` cli you haven't already
+- create kubernetes cluster and connect your cluster to local machine
+  - `aws eks --region region_name update-kubeconfig --name cluster_name`
+  - The above command will add aws kuberntes config in ~/.kube/config file
+- Follow the steps defined under ***Kubernetes*** heading
+- 
