@@ -8,7 +8,7 @@ const app = express();
 app.use(morgan('tiny'));
 
 app.get('/', (req, res) => {
-    res.status(200).send('Hello World!!');
+    res.status(200).send('Hello Kubernetes World!!');
 });
 
 app.listen(PORT, () => {

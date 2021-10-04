@@ -3,6 +3,12 @@ kind: Deployment
 metadata:
   name: simple-node-app
 spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 2 # how many pods we can add at a time
+      maxUnavailable: 0 # maxUnavailable define how many pods can be unavailable during the rolling update
   selector:
     matchLabels:
       app: simple-node-app
@@ -13,13 +19,13 @@ spec:
     spec:
       containers:
       - name: simple-node-app
-        image: docker.io/mandip810/simple-node-app:v1.2
+        image: docker.io/mandip810/simple-node-app:v1.3
         env:
           - name: PORT
             value: "8080"
         resources:
           limits:
-            memory: "128Mi"
+            memory: "512Mi"
             cpu: "500m"
         ports:
         - containerPort: 8080
